@@ -1,4 +1,4 @@
-# 🏺 Cerimex
+# Cerimex
 
 ![Status](https://img.shields.io/badge/status-completo-success)
 ![Platform](https://img.shields.io/badge/platform-web-blue)
