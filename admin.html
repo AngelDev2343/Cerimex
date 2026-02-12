@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Administrador DB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-header">
+            <h2>Iniciar Sesión</h2>
+            <p>Accede a tu panel de administración</p>
+        </div>
+        <form id="adminLoginForm" action="#" method="post" class="login-form">
+            <div class="form-group">
+                <label for="username">Usuario:</label>
+                <input type="text" id="username" name="nombre" required autocomplete="username">
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required autocomplete="current-password">
+            </div>
+            <button type="submit" class="button login-button">Entrar</button>
+        </form>
+    </div>
+    <script src="js/admin_login_script.js"></script> </body>
+</html>

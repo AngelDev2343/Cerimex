@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Tabla - Administrador DB</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        /* Estilos básicos para el modal (puedes moverlos a style2.css si lo prefieres) */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed; /* Posición fija */
+            z-index: 1000; /* Asegura que esté encima de todo */
+            left: 0;
+            top: 0;
+            width: 100%; /* Ancho completo */
+            height: 100%; /* Alto completo */
+            overflow: auto; /* Habilitar scroll si es necesario */
+            background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+            /* display: flex; Estas propiedades se han movido a .modal.active */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        .modal.active {
+            display: flex; /* Mostrar cuando esté activo */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Ancho del modal */
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            animation-name: animatetop;
+            animation-duration: 0.4s;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 20px 0;
+        }
+
+        .modal-body label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .modal-body input[type="text"],
+        .modal-body input[type="number"],
+        .modal-body input[type="email"],
+        .modal-body input[type="password"],
+        .modal-body input[type="date"],
+        .modal-body select,
+        .modal-body textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .modal-footer {
+            padding-top: 15px;
+            text-align: right;
+            border-top: 1px solid #eee;
+        }
+
+        /* Animación para el modal */
+        @keyframes animatetop {
+            from {top: -300px; opacity: 0}
+            to {top: 0; opacity: 1}
+        }
+        .data-table th, .data-table td {
+            white-space: nowrap; /* Evita que el texto se envuelva */
+            overflow: hidden;    /* Oculta el contenido que sobresale */
+            text-overflow: ellipsis; /* Añade puntos suspensivos */
+            max-width: 150px; /* Limita el ancho de la columna */
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <h2><a href="S5PoZ4N5^.html" style="color: white; text-decoration: none;">Volver al Dashboard</a></h2>
+    </div>
+
+    <div class="main-content">
+        <h1 id="table-title">Cargando Tabla...</h1>
+
+        <div class="table-actions">
+            <button id="add-new-row-button" class="button-add">Añadir Nuevo Registro</button>
+        </div>
+
+        <div class="table-data-container">
+            <table class="data-table">
+                <thead>
+                    <tr id="table-header-row">
+                        <!-- Las cabeceras de la tabla se cargarán aquí -->
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Los datos de la tabla se cargarán aquí -->
+                    <tr><td colspan="10">Cargando datos...</td></tr>
+                </tbody>
+            </table>
+            <p id="no-data-message" style="display: none;">No hay datos para mostrar en esta tabla.</p>
+        </div>
+    </div>
+
+    <!-- Modal para Añadir/Editar Registros -->
+    <div id="crudModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-crud-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <form id="crudForm">
+                <div id="modal-form-fields" class="modal-body">
+                    <!-- Los campos del formulario se generarán aquí dinámicamente -->
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="button" id="save-crud-button">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/table_manager_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Pedidos | Cerimex</title>
+    <link rel="stylesheet" href="css/mi-cuenta.css">
+    <style>
+        /* Estilos específicos para la sección de pedidos */
+        .order-history {
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Espacio entre los elementos de pedido */
+        }
+
+        .order-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+
+        .order-item h5 {
+            font-size: 1.2em;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .order-item p {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .order-item strong {
+            color: #333;
+        }
+
+        .order-products-summary {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #eee;
+        }
+
+        .order-products-summary h6 {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .summary-product-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            gap: 10px;
+        }
+
+        .summary-product-item img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+
+        .summary-product-item span {
+            font-size: 0.95em;
+            color: #444;
+        }
+
+        .order-item button {
+            margin-right: 10px;
+            margin-top: 15px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+
+        .track-button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .track-button:hover {
+            background-color: #0056b3;
+        }
+
+        .return-button {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .return-button:hover {
+            background-color: #c82333;
+        }
+
+        .buy-again-button {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .buy-again-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/cerimex-logo.png" alt="logo.png">
+                <h1><a href="index.html">Cerimex</a></h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="mi-cuenta.html">Mi Cuenta</a>
+                <a href="carrito.html">Carrito</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="account-title">Mis Pedidos</h1>
+
+        <section class="order-details">
+            <p>Aquí puedes ver el historial de tus pedidos, rastrear tus envíos y gestionar devoluciones</p>
+            <div class="order-history" id="order-history-container">
+                <p>Cargando historial de pedidos...</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Cerimex. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/pedidos.js"></script>
+</body>
+</html>

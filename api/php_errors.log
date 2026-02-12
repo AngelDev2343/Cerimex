@@ -1,0 +1,147 @@
+[31-May-2025 08:21:35 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in C:\Users\ANG\Desktop\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\Desktop\Cerimex\api\get_products.php(3): require_once()
+#1 {main}
+  thrown in C:\Users\ANG\Desktop\Cerimex\server.php on line 25
+[31-May-2025 08:21:56 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in C:\Users\ANG\Desktop\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\Desktop\Cerimex\api\get_products.php(3): require_once()
+#1 {main}
+  thrown in C:\Users\ANG\Desktop\Cerimex\server.php on line 25
+[31-May-2025 08:21:59 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in C:\Users\ANG\Desktop\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\Desktop\Cerimex\api\get_products.php(3): require_once()
+#1 {main}
+  thrown in C:\Users\ANG\Desktop\Cerimex\server.php on line 25
+[31-May-2025 08:22:00 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in C:\Users\ANG\Desktop\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\Desktop\Cerimex\api\get_products.php(3): require_once()
+#1 {main}
+  thrown in C:\Users\ANG\Desktop\Cerimex\server.php on line 25
+[31-May-2025 08:22:00 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in C:\Users\ANG\Desktop\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\Desktop\Cerimex\api\get_products.php(3): require_once()
+#1 {main}
+  thrown in C:\Users\ANG\Desktop\Cerimex\server.php on line 25
+[31-May-2025 08:23:29 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in C:\Users\ANG\Desktop\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\Desktop\Cerimex\api\get_products.php(3): require_once()
+#1 {main}
+  thrown in C:\Users\ANG\Desktop\Cerimex\server.php on line 25
+[31-May-2025 08:23:45 America/Mexico_City] PHP Fatal error:  Uncaught Error: Class "mysqli" not found in C:\Users\ANG\Desktop\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\Desktop\Cerimex\api\get_products.php(3): require_once()
+#1 {main}
+  thrown in C:\Users\ANG\Desktop\Cerimex\server.php on line 25
+[31-May-2025 21:34:35 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 2
+[31-May-2025 21:34:35 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 2
+[31-May-2025 21:34:35 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\get_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 4
+[31-May-2025 21:35:22 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 2
+[31-May-2025 21:35:22 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 2
+[31-May-2025 21:35:22 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\get_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 4
+[31-May-2025 21:42:31 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 2
+[31-May-2025 21:42:31 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 2
+[31-May-2025 21:42:31 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\get_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 4
+[31-May-2025 21:53:12 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 21:53:12 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 21:53:12 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 21:53:15 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 2
+[31-May-2025 21:53:15 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 2
+[31-May-2025 21:53:15 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\get_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\get_cart.php on line 5
+[31-May-2025 21:54:40 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 21:54:40 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 21:54:40 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 21:54:40 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 8
+[31-May-2025 22:00:15 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:00:15 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:00:15 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:00:19 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:00:19 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:00:19 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:00:23 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:00:23 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:00:23 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:00:23 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 8
+[31-May-2025 22:00:27 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:00:27 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:00:27 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:00:27 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 8
+[31-May-2025 22:04:28 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:28 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:28 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:04:33 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:33 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:33 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:04:33 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 8
+[31-May-2025 22:04:33 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:33 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:33 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:04:33 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 8
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 8
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 8
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 8
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 8
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  session_start(): open(/tmp\sess_5ba0224b485fc02669112e7a81277640, O_RDWR) failed: No such file or directory (2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  session_start(): Failed to read session data: files (path: /tmp) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 2
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  Cannot modify header information - headers already sent by (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 5
+[31-May-2025 22:04:34 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php:2) in C:\Users\ANG\Desktop\Cerimex\api\add_to_cart.php on line 8
+[01-Jun-2025 21:55:48 America/Mexico_City] Error en get_default_address.php: Table 'ceramica_db.direcciones' doesn't exist
+[01-Jun-2025 21:57:43 America/Mexico_City] Error en get_default_address.php: Table 'ceramica_db.direcciones' doesn't exist
+[02-Jun-2025 15:30:35 America/Mexico_City] Error en get_default_address.php: Table 'ceramica_db.direcciones' doesn't exist
+[02-Jun-2025 16:11:36 America/Mexico_City] Error en get_orders.php: Table 'ceramica_db.detalles_pedido' doesn't exist
+[02-Jun-2025 16:14:36 America/Mexico_City] Error en get_orders.php: Unknown column 'p.nombre' in 'field list'
+[02-Jun-2025 16:14:37 America/Mexico_City] Error en get_orders.php: Unknown column 'p.nombre' in 'field list'
+[02-Jun-2025 16:15:03 America/Mexico_City] Error en get_orders.php: Unknown column 'p.nombre' in 'field list'
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #2 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #3 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #4 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #5 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #6 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #7 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #8 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #9 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #10 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #11 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  mysqli_stmt::bind_param(): Argument #12 must be passed by reference, value given in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 99
+[02-Jun-2025 16:49:11 America/Mexico_City] PHP Warning:  http_response_code(): Cannot set response code - headers already sent (output started at C:\Users\ANG\Desktop\Cerimex\api\update_address.php:99) in C:\Users\ANG\Desktop\Cerimex\api\update_address.php on line 105
+[03-Jun-2025 17:18:36 America/Mexico_City] Error en manage_table_row.php: ID de registro no proporcionado para edición.
+[03-Jun-2025 17:20:42 America/Mexico_City] Error en fetch_table_data.php: Unknown column 'id' in 'where clause'
+[03-Jun-2025 17:21:32 America/Mexico_City] Error en fetch_table_data.php: Unknown column 'id' in 'where clause'
+[03-Jun-2025 17:21:34 America/Mexico_City] Error en fetch_table_data.php: Unknown column 'id' in 'where clause'
+[03-Jun-2025 17:22:18 America/Mexico_City] Error en fetch_table_data.php: Unknown column 'id' in 'where clause'
+[03-Jun-2025 20:31:55 America/Mexico_City] PHP Fatal error:  Uncaught mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\ANG\Desktop\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\Desktop\Cerimex\server.php(25): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'ceramica_db')
+#1 C:\Users\ANG\Desktop\Cerimex\api\get_products.php(3): require_once('C:\\Users\\ANG\\De...')
+#2 {main}
+  thrown in C:\Users\ANG\Desktop\Cerimex\server.php on line 25
+[05-Jun-2025 15:41:33 America/Mexico_City] PHP Fatal error:  Uncaught mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\ANG\Desktop\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\Desktop\Cerimex\server.php(25): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'ceramica_db')
+#1 C:\Users\ANG\Desktop\Cerimex\api\get_products.php(3): require_once('C:\\Users\\ANG\\De...')
+#2 {main}
+  thrown in C:\Users\ANG\Desktop\Cerimex\server.php on line 25
+[05-Jun-2025 15:41:38 America/Mexico_City] PHP Fatal error:  Uncaught mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\ANG\Desktop\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\Desktop\Cerimex\server.php(25): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'ceramica_db')
+#1 C:\Users\ANG\Desktop\Cerimex\api\get_products.php(3): require_once('C:\\Users\\ANG\\De...')
+#2 {main}
+  thrown in C:\Users\ANG\Desktop\Cerimex\server.php on line 25
+[21-Aug-2025 21:09:48 America/Mexico_City] PHP Fatal error:  Uncaught mysqli_sql_exception: No se puede establecer una conexión ya que el equipo de destino denegó expresamente dicha conexión in C:\Users\ANG\3D Objects\Cerimex\server.php:25
+Stack trace:
+#0 C:\Users\ANG\3D Objects\Cerimex\server.php(25): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'ceramica_db')
+#1 C:\Users\ANG\3D Objects\Cerimex\api\get_products.php(3): require_once('C:\\Users\\ANG\\3D...')
+#2 {main}
+  thrown in C:\Users\ANG\3D Objects\Cerimex\server.php on line 25

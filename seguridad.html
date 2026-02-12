@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión y seguridad | Cerimex</title>
+    <link rel="stylesheet" href="css/mi-cuenta.css">
+    <style>
+        /* Estilos básicos para el modal (puedes moverlos a mi-cuenta.css) */
+        .modal {
+            display: none; /* Oculto por defecto */
+            position: fixed; /* Posición fija */
+            z-index: 1000; /* Asegura que esté encima de todo */
+            left: 0;
+            top: 0;
+            width: 100%; /* Ancho completo */
+            height: 100%; /* Alto completo */
+            overflow: auto; /* Habilitar scroll si es necesario */
+            background-color: rgba(0,0,0,0.4); /* Fondo semi-transparente */
+            /* display: flex; Estas propiedades se moverán a .modal.active */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        .modal.active {
+            display: flex; /* Mostrar cuando esté activo */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto; /* Centrar en la pantalla */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Ancho del modal */
+            max-width: 500px; /* Ancho máximo */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        .close-button {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-body label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .modal-body input[type="text"],
+        .modal-body input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .modal-footer {
+            text-align: right;
+        }
+
+        .modal-footer button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .modal-footer button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/cerimex-logo.png" alt="logo.png">
+                <h1><a href="index.html">Cerimex</a></h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="mi-cuenta.html">Mi Cuenta</a>
+                <a href="carrito.html">Carrito</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="account-title">Inicio de sesión y seguridad</h1>
+
+        <section class="security-section">
+            <div class="security-item">
+                <div>
+                    <h4>Nombre</h4>
+                    <p id="user-name">Cargando...</p>
+                </div>
+                <button class="edit-button" data-field="nombre">Editar</button>
+            </div>
+
+            <div class="security-item">
+                <div>
+                    <h4>Correo electrónico</h4>
+                    <p id="user-email">Cargando...</p>
+                </div>
+                <button class="edit-button" data-field="email">Editar</button>
+            </div>
+
+            <div class="security-item">
+                <div>
+                    <h4>Número de celular principal</h4>
+                    <p id="user-phone">Cargando...</p>
+                    <p>Inicia sesión rápidamente, recupera contraseñas fácilmente y recibe notificaciones de seguridad con este número de celular.</p>
+                </div>
+                <button class="edit-button" data-field="telefono">Editar</button>
+            </div>
+
+            <div class="security-item">
+                <div>
+                    <h4>Contraseña</h4>
+                    <p id="user-password">Cargando...</p>
+                </div>
+                <button class="edit-button" data-field="contrasena">Editar</button>
+            </div>
+
+            <div class="security-item">
+                <div>
+                    <h4>Cerrar sesión</h4>
+                    <p>Cierra tu sesión en todos los dispositivos.</p>
+                </div>
+                <button class="start-button" id="logout-button">Cerrar sesión</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Cerimex. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="close-modal-button">&times;</span>
+            <h2>Editar <span id="modal-field-name"></span></h2>
+            <div class="modal-body">
+                <label for="modal-input-field" id="modal-label-field"></label>
+                <input type="text" id="modal-input-field">
+                <input type="hidden" id="modal-data-type">
+            </div>
+            <div class="modal-footer">
+                <button id="save-changes-button">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/seguridad.js"></script>
+</body>
+</html>

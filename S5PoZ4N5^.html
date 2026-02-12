@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador de Base de Datos</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div class="sidebar">
+        <h2>CERIMEX DB Admin Panel</h2>
+        <ul id="sidebar-table-list">
+            <li><a href="S5PoZ4N5^.html" class="active">Vista General</a></li>
+            <li><a href="logout.php" id="admin-logout-button">Cerrar Sesión</a></li>
+        </ul>
+        <div class="footer">
+            <p>&copy; 2025 Cerimex</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Panel de Control de Base de Datos</h1>
+            <div class="user-info">
+                Bienvenido, <strong id="admin-name">Cargando...</strong>!
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Total de Tablas</h3>
+                <p class="data-value" id="total-tables">Cargando...</p>
+            </div>
+            <div class="card">
+                <h3>Última Actualización</h3>
+                <p class="data-value">2025-06-03</p> </div>
+            <div class="card">
+                <h3>Usuarios Registrados</h3>
+                <p class="data-value" id="total-users">Cargando...</p>
+            </div>
+        </div>
+
+        <div class="table-preview-section">
+            <h2>Previsualización: Usuarios</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Fecha Registro</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="users-table-body">
+                    <tr>
+                        <td colspan="5">Cargando usuarios...</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 20px;">
+                <a href="023B3!a29dt.html?table=usuarios" class="button">Ver todos los registros</a>
+                <a href="023B3!a29dt.html?table=usuarios&action=add" class="button" style="margin-left: 10px;">Añadir Nuevo Usuario</a>
+            </p>
+        </div>
+    </div>
+    <script src="js/db_dashboard_script.js"></script> </body>
+</html>

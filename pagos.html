@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Pagos | Cerimex</title>
+    <link rel="stylesheet" href="css/pagos.css">
+    <style>
+        /* Tus estilos CSS específicos para pagos.html */
+        .payments-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 0;
+            justify-content: center;
+        }
+        .payment-card, .add-payment-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 280px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+        }
+        .add-payment-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-style: dashed;
+            color: #888;
+        }
+        .add-payment-card img {
+            width: 50px;
+            margin-bottom: 10px;
+        }
+        .default-payment {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+        .card-image {
+            width: 100px;
+            margin-bottom: 10px;
+            margin: 0 auto;
+        }
+        .payment-card h4 {
+            margin: 10px 0 5px;
+        }
+        .payment-card p {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        .payment-card .actions {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+        }
+        .payment-card button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-right: 10px;
+        }
+        .payment-card button.delete-button {
+            background-color: #dc3545;
+        }
+        .payment-card button:hover {
+            opacity: 0.9;
+        }
+
+        /* Estilos para el modal */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto; /* Centered */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            max-width: 500px;
+            width: 90%; /* Responsive width */
+            position: relative;
+        }
+        .close-button {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group select {
+            width: calc(100% - 20px); /* Adjust for padding */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .form-group input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .modal-content button.btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .modal-content button.btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/cerimex-logo.png" alt="logo.png">
+                <h1><a href="index.html">Cerimex</a></h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="mi-cuenta.html">Mi Cuenta</a>
+                <a href="carrito.html">Carrito</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="account-title">Billetera - Tarjetas y cuentas</h1>
+
+        <section class="payments-section" id="payment-methods-container">
+            <div class="add-payment-card" id="add-payment-card-button">
+                <img src="img/mas.png" alt="Agregar método de pago">
+                <p>Agregar método de pago</p>
+            </div>
+        </section>
+
+        <div id="payment-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h2 id="modal-title">Agregar Nuevo Método de Pago</h2>
+                <form id="payment-form">
+                    <input type="hidden" id="payment-id" name="id">
+                    <div class="form-group">
+                        <label for="tipo_tarjeta">Tipo de Tarjeta</label>
+                        <select id="tipo_tarjeta" name="tipo_tarjeta" required>
+                            <option value="Mastercard">Mastercard</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero_tarjeta_completo">Número de Tarjeta (16 dígitos)</label>
+                        <input type="text" id="numero_tarjeta_completo" name="numero_tarjeta_completo" maxlength="16" required pattern="\d{16}" title="Ingresa 16 dígitos numéricos">
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_expiracion">Fecha de Expiración (MM/AA)</label>
+                        <input type="text" id="fecha_expiracion" name="fecha_expiracion" placeholder="MM/AA" maxlength="5" required pattern="(0[1-9]|1[0-2])\/\d{2}" title="Formato MM/AA (ej. 12/25)">
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre_titular">Nombre del Titular</label>
+                        <input type="text" id="nombre_titular" name="nombre_titular" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="es_predeterminado" name="es_predeterminado">
+                        <label for="es_predeterminado">Establecer como predeterminado</label>
+                    </div>
+                    <button type="submit" class="btn">Guardar Método de Pago</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Cerimex. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/payment_methods.js"></script>
+</body>
+</html>

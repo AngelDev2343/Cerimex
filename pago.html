@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proceder al Pago | Cerimex</title>
+  <link rel="stylesheet" href="css/mi-cuenta.css">
+  <link rel="stylesheet" href="css/pago.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="img/cerimex-logo.png" alt="logo.png">
+        <h1>
+          <a href="index.html">Cerimex</a>
+        </h1>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar productos...">
+        <button type="submit">Buscar</button>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="mi-cuenta.html">Mi Cuenta</a>
+        <a href="carrito.html">Carrito (<span id="cart-count-nav">0</span>)</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1 class="account-title">Proceder al Pago</h1>
+
+    <div id="address-missing-message" class="info-message" style="display: none;">
+        <p>¡Atención! Necesitas agregar una dirección de envío predeterminada para proceder al pago.</p>
+        <button class="btn" onclick="window.location.href='direcciones.html'">Ir a Mis Direcciones</button>
+    </div>
+
+    <section class="checkout-section">
+      <div class="shipping-address-container">
+        <h2>Dirección de Envío</h2>
+        <div id="default-address-display" class="address-display-card">
+          <p>Cargando dirección...</p>
+        </div>
+        <button class="btn change-address-btn" onclick="window.location.href='direcciones.html'">Cambiar o Agregar Dirección</button>
+      </div>
+
+      <div class="payment-details">
+        <h2>Método de Pago</h2>
+        <div id="payment-methods-list" class="saved-cards">
+          <p>Cargando métodos de pago...</p>
+        </div>
+        <a href="pagos.html" class="add-new-card-button">Administrar métodos de pago</a>
+      </div>
+
+      <div class="order-summary">
+        <h2>Resumen del Pedido</h2>
+        <div id="order-items-summary">
+            <div class="order-item"><span>Cargando productos...</span></div>
+        </div>
+        <div class="order-summary-totals">
+            <div class="summary-line">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <div class="summary-line">
+                <span>Envío:</span>
+                <span id="cart-shipping">$0.00</span>
+            </div>
+            <div class="summary-line total-line">
+                <span>Total:</span>
+                <span class="cart-total" id="cart-total">$0.00</span>
+            </div>
+        </div>
+        <button id="place-order-button" class="cart-checkout-button">Confirmar y Pagar</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Cerimex. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/pago.js"></script>
+  <script src="js/carrito.js"></script> </body>
+
+</html>

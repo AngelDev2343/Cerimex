@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras | Cerimex</title>
+    <link rel="stylesheet" href="css/carrito.css"> <style>
+        /* Estilos específicos para carrito.html (pueden ir en estilo.css si lo prefieres) */
+        .cart-main-content {
+            display: flex;
+            gap: 20px;
+            padding: 20px 0;
+            flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+        }
+        .cart-container {
+            flex: 2; /* Ocupa 2/3 del espacio */
+            min-width: 300px; /* Ancho mínimo para el contenedor de ítems */
+        }
+        .cart-summary {
+            flex: 1; /* Ocupa 1/3 del espacio */
+            min-width: 250px; /* Ancho mínimo para el resumen */
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            align-self: flex-start; /* Se alinea al inicio y no se estira */
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            flex-wrap: wrap; /* Permite que los elementos internos se envuelvan */
+            gap: 15px;
+        }
+        .cart-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .cart-item-details {
+            flex-grow: 1; /* Ocupa el espacio restante */
+        }
+        .cart-item-title {
+            margin: 0 0 5px 0;
+            font-size: 1.1em;
+            color: #333;
+        }
+        .cart-item-price {
+            margin: 0;
+            font-size: 1em;
+            color: #555;
+            font-weight: bold;
+        }
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .cart-item-quantity label {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .cart-item-quantity input {
+            width: 60px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 1em;
+        }
+        .cart-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px; /* Espacio si los botones se envuelven */
+            flex-basis: 100%; /* Ocupa toda la línea si se envuelve */
+            justify-content: flex-end; /* Alinea los botones a la derecha si se envuelven */
+        }
+        .cart-buttons button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+        }
+        .cart-remove-button {
+            background-color: #f44336;
+            color: white;
+        }
+        .cart-remove-button:hover {
+            background-color: #d32f2f;
+        }
+        .cart-save-button {
+            background-color: #ff9800; /* Naranja */
+            color: white;
+        }
+        .cart-save-button:hover {
+            background-color: #fb8c00;
+        }
+        .cart-summary h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #333;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .cart-summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+        .cart-total {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #000;
+        }
+        .cart-checkout-button {
+            display: block;
+            width: 94%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .cart-checkout-button:hover {
+            background-color: #45a049;
+        }
+        #cart-items-container {
+            min-height: 150px; /* Para mostrar un mensaje si está vacío */
+            text-align: center;
+            padding-top: 50px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/cerimex-logo.png" alt="logo.png">
+                <h1><a href="index.html">Cerimex</a></h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="mi-cuenta.html">Mi Cuenta</a>
+                <a href="carrito.html">Carrito (<span id="cart-count-nav">0</span>)</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="account-title">Carrito de Compras</h1>
+
+        <div class="cart-main-content">
+            <section class="cart-container" id="cart-items-container">
+                <p>Tu carrito está vacío.</p>
+            </section>
+
+            <aside class="cart-summary">
+                <h2>Resumen de la compra</h2>
+                <div class="cart-summary-item">
+                    <span>Subtotal:</span>
+                    <span id="cart-subtotal">$0.00</span>
+                </div>
+                <div class="cart-summary-item">
+                    <span>Envío:</span>
+                    <span id="cart-shipping">$0.00</span>
+                </div>
+                <div class="cart-summary-item">
+                    <span>Total:</span>
+                    <span class="cart-total" id="cart-total">$0.00</span>
+                </div>
+                <a href="pago.html" class="cart-checkout-button">Proceder al pago</a>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Cerimex. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/main.js" defer></script> <script src="js/carrito.js" defer></script> </body>
+</html>

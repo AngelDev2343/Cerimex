@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta | Cerimex</title>
+    <link rel="stylesheet" href="css/micuenta.css">
+    <style>
+        /* Estilos adicionales para la sección de no logueado */
+        .not-logged-in-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-width: 500px;
+            margin: 50px auto;
+        }
+        .not-logged-in-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .not-logged-in-section .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+            border: none; /* Asegura que los botones no tengan borde */
+            cursor: pointer; /* Indica que son clickeables */
+        }
+        .not-logged-in-section .btn:hover {
+            background-color: #0056b3;
+        }
+        .logout-button-container {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 30px; /* Espacio para el footer */
+        }
+        .logout-button {
+            background-color: #dc3545; /* Color rojo para cerrar sesión */
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/cerimex-logo.png" alt="logo.png">
+                <h1>Cerimex</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="mi-cuenta.html">Mi Cuenta</a>
+                <a href="carrito.html">Carrito</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="account-title" id="account-page-title">Mi Cuenta</h1>
+
+        <section id="not-logged-in-content" class="not-logged-in-section" style="display: none;">
+            <h2>Acceso Restringido</h2>
+            <p>Por favor, inicia sesión o regístrate para acceder a tu cuenta.</p>
+            <a href="sesion.html" class="btn">Iniciar Sesión</a>
+            <a href="sesion.html" class="btn">Registrarse</a>
+        </section>
+
+        <section id="logged-in-content" class="account-section" style="display: none;">
+            <div class="account-card"><a href="pedidos.html">
+                <img src="img/pedidos.png" alt="pedidos">
+                <h3>Mis pedidos</h3>
+                <p>Rastrear paquetes, devolver pedidos o comprar algo de nuevo</p>
+                </a>
+            </div>
+
+            <div class="account-card"><a href="seguridad.html">
+                <img src="img/seguridad.png" alt="seguridad">
+                <h3>Inicio de sesión y seguridad</h3>
+                <p>Cambiar correo electrónico, contraseña y número de teléfono móvil</p>
+                </a>
+            </div>
+
+            <div class="account-card"><a href="direcciones.html">
+                <img src="img/direcciones.png" alt="Direcciones">
+                <h3>Direcciones</h3>
+                <p>Editar direcciones para pedidos</p>
+                </a>
+            </div>
+
+            <div class="account-card"><a href="pagos.html">
+                <img src="img/pagos.png" alt="Mis pagos">
+                <h3>Mis pagos</h3>
+                <p>Administrar o agregar métodos de pago</p>
+                </a>
+            </div>
+
+            <div class="account-card"><a href="scliente.html">
+                <img src="img/scliente.png" alt="Servicio al cliente">
+                <h3>Servicio al cliente</h3>
+                <p>Explorar las opciones de artículos de ayuda o contáctanos</p>
+                </a>
+            </div>
+        </section>
+
+        <div id="logout-button-container" class="logout-button-container" style="display: none;">
+            <button id="logout-button" class="logout-button">Cerrar Sesión</button>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Cerimex. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/mi-cuenta.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas | Cerimex</title>
+    <link rel="stylesheet" href="css/estilo.css">
+    <style>
+        .offer-price {
+            text-decoration: line-through;
+            color: #888;
+            margin-right: 5px;
+        }
+
+        .discounted-price {
+            color: green;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Mantendremos esta clase si decides calcular el porcentaje en JS */
+        .discount-percent {
+            color: red;
+            font-weight: bold;
+        }
+
+        .product-card {
+            position: relative; /* For positioning the discount badge */
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: red;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="img/cerimex-logo.png" alt="logo.png">
+                <h1><a href="index.html">Cerimex</a></h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="categorias.html">Categorías</a>
+                <a href="ofertas.html">Ofertas</a>
+                <a href="mi-cuenta.html">Mi Cuenta</a>
+                <a href="carrito.html">Carrito</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <h1>¡Aprovecha Nuestras Mejores Ofertas!</h1>
+            <p>Encuentra descuentos increíbles en una gran variedad de productos.</p>
+            <a href="index.html" class="btn">Regresar a inicio</a>
+        </section>
+
+        <section class="product-grid" id="offer-product-grid">
+            </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Cerimex. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="js/ofertas.js" defer></script> </body>
+</html>

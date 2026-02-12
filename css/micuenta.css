@@ -1,0 +1,282 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f2f7; /* Azul muy claro para fondos tenues */
+    color: #2c3e50; /* Azul muy oscuro para texto principal */
+}
+
+.navbar {
+    background-color: #2c3e50;
+    /* Azul muy oscuro para navbar */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+    /* Blanco */
+}
+
+/* Nuevo estilo para el contenedor del logo y el texto */
+.navbar .logo-container {
+    display: flex;
+    /* Para que la imagen y el h1 se muestren en línea */
+    align-items: center;
+    /* Para alinear verticalmente el texto y la imagen */
+    margin-right: 15%;
+    /* Mantiene el margen derecho que tenías antes */
+}
+
+.navbar .logo-container img {
+    height: 60px;
+    /* Ajusta la altura de tu logo si es necesario */
+    margin-right: 10px;
+    /* Espacio entre la imagen y el texto */
+}
+
+.navbar .logo-container h1 {
+    /* Cambiado de .navbar h1 a .navbar .logo-container h1 */
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    /* Blanco */
+    text-decoration: none;
+    margin: 0;
+    /* Elimina los márgenes predeterminados del h1 para pegarlo a la imagen */
+}
+
+.navbar .search-bar {
+    flex-grow: 1;
+    margin: 0 20px;
+    display: flex;
+    max-width: 600px;
+    margin-right: 7%;
+}
+
+.navbar .search-bar input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+.navbar .search-bar button {
+    background-color: #a7d9ed;
+    /* Azul medio */
+    color: #ffffff;
+    /* Blanco */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .search-bar button:hover {
+    background-color: #8bbadc;
+    /* Un tono un poco más oscuro al pasar el ratón */
+}
+
+.navbar .nav-links a {
+    color: #ffffff;
+    /* Blanco */
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #a7d9ed; /* Azul medio */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.account-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+}
+
+/* ESTILOS PARA LA SECCIÓN DE CUENTA (AHORA FLEXIBLE) */
+.account-section {
+    display: flex; /* Asegurado por JS, pero bueno tenerlo aquí también */
+    flex-wrap: wrap; /* Permite que las tarjetas salten a la siguiente línea */
+    gap: 20px; /* Espacio entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    padding: 20px 0; /* Un poco de padding vertical */
+}
+
+.account-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px; /* Reducido el padding */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* ANTES: width: calc(33.333% - 20px); */
+    width: calc(30% - 20px); /* Hacemos las tarjetas un poco más pequeñas (aumenta el espacio entre ellas si son 3) */
+    /* O podrías intentar 4 columnas en desktop: width: calc(25% - 20px); */
+    min-width: 250px; /* Ancho mínimo ligeramente reducido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.account-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.account-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.account-card img {
+    /* ANTES: max-width: 80px; */
+    max-width: 60px; /* Reducimos el tamaño de la imagen/icono */
+    height: auto;
+    margin-bottom: 10px; /* Espacio reducido después de la imagen */
+    filter: drop-shadow(2px 2px 5px rgba(0,0,0,0.2));
+}
+
+.account-card h3 {
+    color: #34495e;
+    margin-bottom: 8px; /* Espacio ligeramente reducido */
+    font-size: 1.3em; /* Tamaño de fuente ligeramente reducido */
+}
+
+.account-card p {
+    color: #7f8c8d;
+    font-size: 0.9em; /* Tamaño de fuente ligeramente reducido */
+    line-height: 1.4; /* Espaciado entre líneas ligeramente reducido */
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+/* MEDIA QUERIES para responsividad */
+@media (max-width: 992px) {
+    .account-card {
+        width: calc(45% - 20px); /* 2 columnas en tablets, un poco más pequeñas */
+        min-width: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .search-bar {
+        margin: 15px 0;
+        width: 100%;
+        max-width: none;
+    }
+
+    .navbar .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar .nav-links a {
+        margin: 5px 10px;
+    }
+
+    .account-card {
+        width: calc(90% - 20px); /* 1 columna en móviles, con un poco de margen */
+        min-width: unset; /* Elimina el mínimo para que se adapte al 90% */
+    }
+
+    .not-logged-in-section {
+        margin: 30px 10px;
+        padding: 30px 15px;
+    }
+    .not-logged-in-section .btn {
+        display: block;
+        margin: 10px auto;
+        width: 90%;
+    }
+}
+
+/* Estilos para la sección de no logueado */
+.not-logged-in-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 50px auto;
+}
+.not-logged-in-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.not-logged-in-section .btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+.not-logged-in-section .btn:hover {
+    background-color: #0056b3;
+}
+.logout-button-container {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+.logout-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+/* Asegúrate de que tu footer tenga el estilo adecuado */
+.footer {
+    text-align: center;
+    padding: 12px;
+    margin-top: 144px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-size: 0.9em;
+}

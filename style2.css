@@ -1,0 +1,175 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f7fa;
+    /* QUITAMOS display: flex; de aquí para edit_table.html */
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Solo aplicar display: flex; si el sidebar está presente */
+body.has-sidebar { /* Nueva clase para el body de index.html */
+    display: flex;
+}
+
+.sidebar {
+    width: 220px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ... (el resto de tu CSS existente para .sidebar, .main-content, etc.) ... */
+
+
+/* --- Nuevas reglas para .top-nav en edit_table.html --- */
+.top-nav { /* Nueva clase para una navegación superior simple */
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.top-nav h2 {
+    margin: 0;
+    color: #ecf0f1;
+    font-size: 1.5em;
+}
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+.top-nav ul li {
+    margin-left: 20px;
+}
+.top-nav ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.top-nav ul li a:hover {
+    background-color: #34495e;
+    color: #ffffff;
+}
+
+/* --- Estilos para la página de inicio de sesión (login.html) --- */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
+    background-color: #e2e8f0; /* Un color de fondo diferente para el login */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye el padding en el ancho/alto total */
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para el formulario */
+    text-align: center;
+}
+
+.login-header {
+    margin-bottom: 30px;
+}
+
+.login-header h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Alinea etiquetas a la izquierda */
+}
+
+.form-group label {
+    display: block; /* Muestra la etiqueta en su propia línea */
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: calc(100% - 20px); /* Ancho completo menos el padding */
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Asegura que padding no aumente el ancho */
+}
+
+.login-button {
+    width: 100%; /* El botón ocupa todo el ancho */
+    padding: 12px 20px;
+    font-size: 1.1em;
+    margin-top: 20px;
+    /* Los estilos de .button ya definen el color, etc. */
+}
+
+.data-table {
+    margin-left: 100px;
+    margin-right: 10px;
+}
+
+.button-add {
+    margin-left: 100px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.button-add:hover {
+    background-color: #2980b9;
+}
+
+.button {
+    margin-bottom: 15px;
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #2980b9;
+}
+
+h1 {
+    margin-left: 80px;
+}

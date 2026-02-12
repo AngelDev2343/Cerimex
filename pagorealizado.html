@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido Realizado | Cerimex</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <style>
+    /* Estilos existentes */
+    .confirm-payment-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .confirm-payment-button:hover {
+      background-color: #0056b3;
+    }
+
+    .order-confirmation {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .confirmation-message {
+      font-size: 2em;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    .order-details {
+      margin-bottom: 20px;
+    }
+
+    .order-date {
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .product-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .product-item {
+      width: 200px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      text-align: left; /* Alineación del texto dentro del item */
+    }
+
+    .product-item img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 4px; /* Pequeño borde redondeado para las imágenes */
+    }
+
+    .product-item p {
+      font-size: 0.9em;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .product-item strong {
+        color: #333;
+    }
+
+    .order-summary-totals {
+        margin-top: 20px;
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+        text-align: right;
+    }
+
+    .summary-line {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+    }
+
+    .total-line {
+        font-weight: bold;
+        font-size: 1.3em;
+        color: #2c3e50;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="img/cerimex-logo.png" alt="logo.png">
+        <h1>
+          <a href="index.html">Cerimex</a>
+        </h1>
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Buscar productos...">
+        <button type="submit">Buscar</button>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="categorias.html">Categorías</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="mi-cuenta.html">Mi Cuenta</a>
+        <a href="carrito.html">Carrito</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="order-confirmation">
+      <h2 class="confirmation-message">¡Pedido Realizado con Éxito!</h2>
+      <div class="order-details">
+        <p class="order-date">Fecha del Pedido: <span id="order-display-date"></span></p>
+        <p>Gracias por tu compra. Tu pedido está en proceso de envío.</p>
+      </div>
+      <div class="product-list" id="order-products-list">
+        <p>Cargando productos del pedido...</p>
+      </div>
+
+      <div class="order-summary-totals">
+            <div class="summary-line">
+                <span>Subtotal:</span>
+                <span id="order-subtotal">$0.00</span>
+            </div>
+            <div class="summary-line">
+                <span>Envío:</span>
+                <span id="order-shipping">$0.00</span>
+            </div>
+            <div class="summary-line total-line">
+                <span>Total:</span>
+                <span class="cart-total" id="order-total">$0.00</span>
+            </div>
+        </div>
+
+      <a href="index.html"><button class="confirm-payment-button">Regresar a inicio</button></a>
+    </section>
+  </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const orderProductsList = document.getElementById('order-products-list');
+        const orderDisplayDate = document.getElementById('order-display-date');
+        const orderSubtotalSpan = document.getElementById('order-subtotal');
+        const orderShippingSpan = document.getElementById('order-shipping');
+        const orderTotalSpan = document.getElementById('order-total');
+
+        // Recuperar los datos del pedido de sessionStorage
+        const storedOrderItems = sessionStorage.getItem('orderItems');
+        const storedOrderTotal = sessionStorage.getItem('orderTotal');
+        const storedOrderDate = sessionStorage.getItem('orderDate');
+
+        if (storedOrderItems) {
+            try {
+                const orderItems = JSON.parse(storedOrderItems);
+                orderProductsList.innerHTML = ''; // Limpiar el mensaje de carga
+
+                orderItems.forEach(item => {
+                    const productItemDiv = document.createElement('div');
+                    productItemDiv.classList.add('product-item');
+                    productItemDiv.innerHTML = `
+                        <img src="${item.image_url || 'https://placehold.co/200x150/cccccc/333333?text=Producto'}" alt="${item.name}" onerror="this.onerror=null;this.src='https://placehold.co/200x150/cccccc/333333?text=No+Imagen';">
+                        <p><strong>${item.name}</strong> - Cantidad: ${item.quantity}</p>
+                        <p>Precio Unitario: $${item.price.toFixed(2)}</p>
+                        <p>Subtotal: $${(item.price * item.quantity).toFixed(2)}</p>
+                        <p>${item.description || 'Sin descripción.'}</p>
+                    `;
+                    orderProductsList.appendChild(productItemDiv);
+                });
+
+                // Actualizar totales
+                let subtotal = 0;
+                orderItems.forEach(item => {
+                    subtotal += item.price * item.quantity;
+                });
+                const shipping = 0; // Asume el mismo envío que en la página de pago
+                const total = subtotal + shipping;
+
+                orderSubtotalSpan.textContent = `$${subtotal.toFixed(2)}`;
+                orderShippingSpan.textContent = `$${shipping.toFixed(2)}`;
+                orderTotalSpan.textContent = `$${total.toFixed(2)}`;
+
+
+            } catch (e) {
+                console.error('Error al parsear los ítems del pedido desde sessionStorage:', e);
+                orderProductsList.innerHTML = '<p>Error al cargar los detalles del pedido.</p>';
+            }
+        } else {
+            orderProductsList.innerHTML = '<p>No se encontraron detalles del pedido. Tu carrito podría estar vacío o la página fue accedida directamente.</p>';
+        }
+
+        if (storedOrderDate) {
+            orderDisplayDate.textContent = storedOrderDate;
+        } else {
+            orderDisplayDate.textContent = 'Fecha no disponible';
+        }
+
+        // Limpiar sessionStorage después de cargar los datos para evitar que se muestren de nuevo
+        // si el usuario navega a esta página sin un nuevo pedido.
+        sessionStorage.removeItem('orderItems');
+        sessionStorage.removeItem('orderTotal');
+        sessionStorage.removeItem('orderDate');
+    });
+  </script>
+</body>
+
+</html>
