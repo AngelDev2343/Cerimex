@@ -25,6 +25,17 @@ académicos y demostrativos.
 
 ---
 
+# 🖥️ Demo
+
+<div align="center">
+
+![demo](https://github.com/AngelDev2343/land/blob/main/gifs/cerimex.gif?raw=true)
+
+</div>
+
+
+---
+
 ## 🎯 Objetivo del proyecto
 
 Cerimex nace con un enfoque claro:
