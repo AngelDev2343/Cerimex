@@ -123,15 +123,6 @@ Requiere:
 
 ---
 
-## 💻 Requisitos recomendados
-
-- PHP
-- Apache
-- MySQL
-- Navegador actualizado
-
----
-
 ## 🌍 Estado del proyecto
 
 - Estado: Terminado
